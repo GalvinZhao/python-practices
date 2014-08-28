@@ -1,0 +1,21 @@
+﻿
+根据tProduct.cvv_key_index，获取ZMK
+输入域		长度	类型	备注
+类型		1		H		0x05
+命令		1		H		0xA9
+CVKA		8		H		0x0000000000000000	[ZMK前16位]
+CVKB		8		H		0x0000000000000000	[ZMK后16位]
+长度		1		H		0x24			[卡账号+分隔符+有效期+服务商代码的长度]
+卡帐号		16/19		A  		5210250300000016	[TB_ACC_CARD_INFO.card_no]
+分割符		1		A		;
+有效期		4		A 		1407			[TB_ACC_CARD_INFO.valid_date[2:4]
+服务商代码	3		A 		000 			[TB_ACC_CARD_INFO.SVC_CODE]
+
+出域		长度	类型	备注
+应答码		1		A		“A”
+CVV	3			H
+或
+应答码		1		A		“E”
+错误码		1		H		0x43：没有LMK
+						0xB0：数据长度错
+						0xB1：数据输入错

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://anandology.com/python-practice-book/working-with-data.html#strings -->
+<html class="no-js" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Working with Data — Python Practice Book</title>
+  
+
+  
+  
+
+  
+  <link href="./WorkingwithData_files/css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./WorkingwithData_files/theme.css" type="text/css">
+  
+
+  
+    <link rel="top" title="Python Practice Book" href="http://anandology.com/python-practice-book/index.html">
+        <link rel="next" title="3. Modules" href="http://anandology.com/python-practice-book/modules.html">
+        <link rel="prev" title="1. Getting Started" href="http://anandology.com/python-practice-book/getting-started.html">
+ 
+
+<script type="text/javascript" async="" src="./WorkingwithData_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31293347-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+<script type="text/javascript" async="" src="./WorkingwithData_files/in.php"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="http://anandology.com/python-practice-book/index.html" class="fa fa-home"> Python Practice Book</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://anandology.com/python-practice-book/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-interpreter">1.1. Running Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-scripts">1.2. Running Python Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#assignments">1.3. Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#numbers">1.4. Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#strings">1.5. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#functions">1.6. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#conditional-expressions">1.7. Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#lists">1.8. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#modules">1.9. Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Working with Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#lists">2.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#tuples">2.2. Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#sets">2.3. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="./WorkingwithData_files/WorkingwithData.htm">2.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-files">2.5. Working With Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#list-comprehensions">2.6. List Comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#dictionaries">2.7. Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html">3. Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#standard-library">3.1. Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules">3.2. Installing third-party modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html">4. Object Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#state">4.1. State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#classes-and-objects">4.2. Classes and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#inheritance">4.3. Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#special-class-methods">4.4. Special Class Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#errors-and-exceptions">4.5. Errors and Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html">5. Iterators &amp; Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#iterators">5.1. Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generators">5.2. Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generator-expressions">5.3. Generator Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#itertools">5.4. Itertools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html">6. Functional Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#recursion">6.1. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#higher-order-functions-decorators">6.2. Higher Order Functions &amp; Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#exec-eval">6.3. exec &amp; eval</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://anandology.com/python-practice-book/index.html">Docs</a> »</li>
+      
+    <li>2. Working with Data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="http://anandology.com/python-practice-book/_sources/working-with-data.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            
+  <div class="section" id="working-with-data">
+<h1>2. Working with Data<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lists">
+<h2>2.1. Lists<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#lists" title="Permalink to this headline">¶</a></h2>
+<p>We’ve already seen quick introduction to lists in the previous chapter.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="go">[1, 2, 3, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s">"hello"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">]</span>
+<span class="go">["hello", "world"]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s">"hello"</span><span class="p">]</span>
+<span class="go">[0, 1.5, "hello"]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s">"hello"</span><span class="p">]</span>
+<span class="go">[0, 1.5, "hello"]</span>
+</pre></div>
+</div>
+<p>A List can contain another list as member.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">[1.5, 2, [1, 2]]</span>
+</pre></div>
+</div>
+<p>The built-in function <tt class="docutils literal"><span class="pre">range</span></tt> can be used to create a list of integers.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">[0, 1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="go">[3, 4, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[2, 5, 8]</span>
+</pre></div>
+</div>
+<p>The built-in function <tt class="docutils literal"><span class="pre">len</span></tt> can be used to find the length of a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">+</span></tt> and <tt class="docutils literal"><span class="pre">*</span></tt> operators work even on lists.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="go">[1, 2, 3, 4, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="go">[4, 5, 4, 5, 4, 5]</span>
+</pre></div>
+</div>
+<p>List can be indexed to get individual entries. Value of index can go from 0 to (length of list - 1).</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>When a wrong index is used, python gives an error.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in <span class="n">?</span>
+<span class="gr">IndexError</span>: <span class="n">list index out of range</span>
+</pre></div>
+</div>
+<p>Negative indices can be used to index the list from right.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>We can use list slicing to get part of a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">[2, 3, 4]</span>
+</pre></div>
+</div>
+<p>Even negative indices can be used in slicing. For example, the following examples strips the last element from the list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+<p>Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second index defaults to the size of the list being sliced.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[1, 2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">[3, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
+<span class="go">[1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<p>An optional third index can be used to specify the increment, which defaults to 1.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[0, 2, 4]</span>
+</pre></div>
+</div>
+<p>We can reverse a list, just by providing -1 for increment.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span>
+</pre></div>
+</div>
+<p>List members can be modified by assignment.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">[1, 5, 3, 4]</span>
+</pre></div>
+</div>
+<p>Presence of a key in a list can be tested using <tt class="docutils literal"><span class="pre">in</span></tt> operator.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">10</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Values can be appended to a list by calling <tt class="docutils literal"><span class="pre">append</span></tt> method on list. A method is just like a function, but it is associated with an object and can access that object when it is called. We will learn more about methods when we study classes.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+<p><strong>Problem 1: </strong>What will be the output of the following program?</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">print</span> <span class="n">x</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">x</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="n">x</span>
+</pre></div>
+</div>
+<div class="section" id="the-for-statement">
+<h3>2.1.1. The for Statement<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#the-for-statement" title="Permalink to this headline">¶</a></h3>
+<p>Python provides <tt class="docutils literal"><span class="pre">for</span></tt> statement to iterate over a list. A <tt class="docutils literal"><span class="pre">for</span></tt> statement executes the specified block of code for every element in a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="n">x</span>
+
+<span class="k">for</span> <span class="n">i</span>  <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+   <span class="k">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">i</span>
+</pre></div>
+</div>
+<p>The built-in function <tt class="docutils literal"><span class="pre">zip</span></tt> takes two lists and returns list of pairs.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">zip</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">[('a', 1), ('b', 2), ('c', 3)]</span>
+</pre></div>
+</div>
+<p>It is handy when we want to iterate over two lists together.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p><strong>Problem 2: </strong>Python has a built-in function <tt class="docutils literal"><span class="pre">sum</span></tt> to find sum of all elements of a list. Provide an implementation for <tt class="docutils literal"><span class="pre">sum</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span>
+</pre></div>
+</div>
+<p><strong>Problem 3: </strong>What happens when the above <tt class="docutils literal"><span class="pre">sum</span></tt> function is called with a list of strings? Can you make your <tt class="docutils literal"><span class="pre">sum</span></tt> function work for a list of strings as well.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="s">"hello"</span><span class="p">,</span> <span class="s">"world"</span><span class="p">])</span>
+<span class="go">"helloworld"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">([</span><span class="s">"aa"</span><span class="p">,</span> <span class="s">"bb"</span><span class="p">,</span> <span class="s">"cc"</span><span class="p">])</span>
+<span class="go">"aabbcc"</span>
+</pre></div>
+</div>
+<p><strong>Problem 4: </strong>Implement a function <tt class="docutils literal"><span class="pre">product</span></tt>, to compute product of a list of numbers.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">product</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p><strong>Problem 5: </strong>Write a function <tt class="docutils literal"><span class="pre">factorial</span></tt> to compute factorial of a number.
+Can you use the <tt class="docutils literal"><span class="pre">product</span></tt> function defined in the previous example to
+compute factorial?</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">24</span>
+</pre></div>
+</div>
+<p><strong>Problem 6: </strong>Write a function <tt class="docutils literal"><span class="pre">reverse</span></tt> to reverse a list. Can you do this
+without using list slicing?</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">reverse</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="go">[4, 3, 2, 1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">reverse</span><span class="p">(</span><span class="n">reverse</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="go">[1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<p><strong>Problem 7: </strong>Python has built-in functions <tt class="docutils literal"><span class="pre">min</span></tt> and <tt class="docutils literal"><span class="pre">max</span></tt> to compute
+minimum and maximum of a given list. Provide an implementation for these
+functions. What happens when you call your <tt class="docutils literal"><span class="pre">min</span></tt> and <tt class="docutils literal"><span class="pre">max</span></tt> functions with a
+list of strings?</p>
+<p><strong>Problem 8: </strong>Cumulative sum of a list <tt class="docutils literal"><span class="pre">[a,</span> <span class="pre">b,</span> <span class="pre">c,</span> <span class="pre">...]</span></tt> is defined as <tt class="docutils literal"><span class="pre">[a,</span>
+<span class="pre">a+b,</span> <span class="pre">a+b+c,</span> <span class="pre">...]</span></tt>. Write a function <tt class="docutils literal"><span class="pre">cumulative_sum</span></tt> to compute
+cumulative sum of a list. Does your implementation work for a list of strings?</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">cumulative_sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="go">[1, 3, 6, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cumulative_sum</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">[4, 7, 9, 10]</span>
+</pre></div>
+</div>
+<p><strong>Problem 9: </strong>Write a function <tt class="docutils literal"><span class="pre">cumulative_product</span></tt> to compute cumulative
+product of a list of numbers.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">cumulative_product</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="go">[1, 2, 6, 24]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cumulative_product</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">[4, 12, 24, 24]</span>
+</pre></div>
+</div>
+<p><strong>Problem 10: </strong>Write a function <cite>unique</cite> to find all the unique elements of a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">unique</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">[1, 2, 3, 5]</span>
+</pre></div>
+</div>
+<p><strong>Problem 11: </strong>Write a function <cite>dups</cite> to find all duplicates in the list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dups</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">[1, 2]</span>
+</pre></div>
+</div>
+<p><strong>Problem 12: </strong>Write a function <cite>group(list, size)</cite> that take a list and splits
+into smaller lists of given size.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">group</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[[1, 2, 3], [4, 5, 6], [7, 8, 9]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">group</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">[[1, 2, 3, 4], [5, 6, 7, 8], [9]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sorting-lists">
+<h3>2.1.2. Sorting Lists<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#sorting-lists" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">sort</span></tt> method sorts a list in place.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[2, 3, 4, 7 10]</span>
+</pre></div>
+</div>
+<p>The built-in function <tt class="docutils literal"><span class="pre">sorted</span></tt> returns a new sorted list without modifying
+the source list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">[2, 3, 4, 5, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[4, 3, 5, 9, 2]</span>
+</pre></div>
+</div>
+<p>The behavior of <tt class="docutils literal"><span class="pre">sort</span></tt> method and <tt class="docutils literal"><span class="pre">sorted</span></tt> function is exactly same except that sorted returns a new list instead of modifying the given list.</p>
+<p>The <tt class="docutils literal"><span class="pre">sort</span></tt> method works even when the list has different types of objects and even lists.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">"hello"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"world"</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 45, 'hello', 'world']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[[1, 6], [2, 3]]</span>
+</pre></div>
+</div>
+<p>We can optionally specify a function as sort key.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[[6, 1], [2, 3],  [4 6]]</span>
+</pre></div>
+</div>
+<p>This sorts all the elements of the list based on the value of second element of each entry.</p>
+<p><strong>Problem 13: </strong>Write a function <tt class="docutils literal"><span class="pre">lensort</span></tt> to sort a list of strings based on length.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lensort</span><span class="p">([</span><span class="s">'python'</span><span class="p">,</span> <span class="s">'perl'</span><span class="p">,</span> <span class="s">'java'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'haskell'</span><span class="p">,</span> <span class="s">'ruby'</span><span class="p">])</span>
+<span class="go">['c', 'perl', 'java', 'ruby', 'python', 'haskell']</span>
+</pre></div>
+</div>
+<p><strong>Problem 14: </strong>Improve the <cite>unique</cite> function written in previous problems to take
+an optional <cite>key</cite> function as argument and use the return value of the key
+function to check for uniqueness.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">unique</span><span class="p">([</span><span class="s">"python"</span><span class="p">,</span> <span class="s">"java"</span><span class="p">,</span> <span class="s">"Python"</span><span class="p">,</span> <span class="s">"Java"</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="go">["python", "java"]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tuples">
+<h2>2.2. Tuples<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#tuples" title="Permalink to this headline">¶</a></h2>
+<p>Tuple is a sequence type just like <tt class="docutils literal"><span class="pre">list</span></tt>, but it is immutable.
+A tuple consists of a number of values separated by commas.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>The enclosing braces are optional.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+<p>The built-in function <tt class="docutils literal"><span class="pre">len</span></tt> and slicing works on tuples too.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">2, 3</span>
+</pre></div>
+</div>
+<p>Since parenthesis are also used for grouping, tuples with a single value are represented with an additional comma.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&gt;&gt; a</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">(1,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sets">
+<h2>2.3. Sets<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#sets" title="Permalink to this headline">¶</a></h2>
+<p>Sets are unordered collection of unique elements.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">set([1, 2, 3])</span>
+</pre></div>
+</div>
+<p>Python 2.7 introduced a new way of writing sets.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<span class="go">set([1, 2, 3])</span>
+</pre></div>
+</div>
+<p>New elements can be added to a set using the <tt class="docutils literal"><span class="pre">add</span></tt> method.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">set([1, 2, 3, 4])</span>
+</pre></div>
+</div>
+<p>Just like lists, the existance of an element can be checked using the <tt class="docutils literal"><span class="pre">in</span></tt>
+operator. However, this operation is faster in sets compared to lists.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p><strong>Problem 15: </strong>Reimplement the <cite>unique</cite> function implemented in the earlier
+examples using sets.</p>
+</div>
+<div class="section" id="strings">
+<h2>2.4. Strings<a class="headerlink" href="./WorkingwithData_files/WorkingwithData.htm" title="Permalink to this headline">¶</a></h2>
+<p>Strings also behave like lists in many ways.
+Length of a string can be found using built-in function <tt class="docutils literal"><span class="pre">len</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="s">"abrakadabra"</span><span class="p">)</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<p>Indexing and slicing on strings behave similar to that of lists.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="s">"helloworld"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">'e'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">'l'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">"ello"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">"hello"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="go">"world"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">'ld'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">'hellowor'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">'dlrowolleh'</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">in</span></tt> operator can be used to check if a string is present in another string.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">'hell'</span> <span class="ow">in</span> <span class="s">'hello'</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'full'</span> <span class="ow">in</span> <span class="s">'hello'</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'el'</span> <span class="ow">in</span> <span class="s">'hello'</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>There are many useful methods on strings.</p>
+<p>The <tt class="docutils literal"><span class="pre">split</span></tt> method splits a string using a delimiter. If no delimiter is specified, it uses any whitespace char as delimiter.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">"hello world"</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="go">['hello', 'world']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">"a,b,c"</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+<span class="go">['a', 'b', 'c']</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">join</span></tt> method joins a list of strings.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">" "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">'hello'</span><span class="p">,</span> <span class="s">'world'</span><span class="p">])</span>
+<span class="go">'hello world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">','</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">strip</span></tt> method returns a copy of the given string with leading and trailing whitespace removed. Optionally a string can be passed as argument to remove characters from that string instead of whitespace.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">' hello world</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="go">'hello world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'abcdefgh'</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">'abdh'</span><span class="p">)</span>
+<span class="go">'cdefg'</span>
+</pre></div>
+</div>
+<p>Python supports formatting values into strings. Although this can include very complicated expressions, the most basic usage is to insert values into a string with the %s placeholder.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="s">'hello'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="s">'python'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">"</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">'hello python'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'Chapter </span><span class="si">%d</span><span class="s">: </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'Data Structures'</span><span class="p">)</span>
+<span class="go">'Chapter 2: Data Structures'</span>
+</pre></div>
+</div>
+<p><strong>Problem 16: </strong>Write a function <tt class="docutils literal"><span class="pre">extsort</span></tt> to sort a list of files based on extension.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">extsort</span><span class="p">([</span><span class="s">'a.c'</span><span class="p">,</span> <span class="s">'a.py'</span><span class="p">,</span> <span class="s">'b.py'</span><span class="p">,</span> <span class="s">'bar.txt'</span><span class="p">,</span> <span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'x.c'</span><span class="p">])</span>
+<span class="go">['a.c', 'x.c', 'a.py', 'b.py', 'bar.txt', 'foo.txt']</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-with-files">
+<h2>2.5. Working With Files<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-files" title="Permalink to this headline">¶</a></h2>
+<p>Python provides a built-in function <tt class="docutils literal"><span class="pre">open</span></tt> to open a file, which returns a file object.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="c"># open a file in read mode</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="c"># open a file in write mode</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">)</span> <span class="c"># open a file in append mode</span>
+</pre></div>
+</div>
+<p>The second argument to <tt class="docutils literal"><span class="pre">open</span></tt> is optional, which defaults to <tt class="docutils literal"><span class="pre">'r'</span></tt> when not specified.</p>
+<p>Unix does not distinguish binary files from text files but windows does. On windows <tt class="docutils literal"><span class="pre">'rb'</span></tt>, <tt class="docutils literal"><span class="pre">'wb'</span></tt>, <tt class="docutils literal"><span class="pre">'ab'</span></tt> should be used to open a binary file in read, write and append mode respectively.</p>
+<p>Easiest way to read contents of a file is by using the <tt class="docutils literal"><span class="pre">read</span></tt> method.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">'first line\nsecond line\nlast line\n'</span>
+</pre></div>
+</div>
+<p>Contents of a file can be read line-wise using <tt class="docutils literal"><span class="pre">readline</span></tt> and <tt class="docutils literal"><span class="pre">readlines</span></tt> methods.
+The <tt class="docutils literal"><span class="pre">readline</span></tt> method returns empty string when there is nothing more to read in a file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="go">['first line\n', 'second line\n', 'last line\n']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">'first line\n'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">'second line\n'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">'last line\n'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="go">''</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">write</span></tt> method is used to write data to a file opened in write or append mode.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'a</span><span class="se">\n</span><span class="s">b</span><span class="se">\n</span><span class="s">c'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'d</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">writelines</span></tt> method is convenient to use when the data is available as a list of lines.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'foo.txt'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">([</span><span class="s">'a</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">'b</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">'c</span><span class="se">\n</span><span class="s">'</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="example-word-count">
+<h3>2.5.1. Example: Word Count<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#example-word-count" title="Permalink to this headline">¶</a></h3>
+<p>Lets try to compute the number of characters, words and lines in a file.</p>
+<p>Number of characters in a file is same as the length of its contents.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">charcount</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Number of words in a file can be found by splitting the contents of the file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">wordcount</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Number of lines in a file can be found from <tt class="docutils literal"><span class="pre">readlines</span></tt> method.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">linecount</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>Problem 17: </strong>Write a program <tt class="docutils literal"><span class="pre">reverse.py</span></tt> to print lines of a file in reverse order.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ cat she.txt
+She sells seashells on the seashore;
+The shells that she sells are seashells I'm sure.
+So if she sells seashells on the seashore,
+I'm sure that the shells are seashore shells.
+
+$ python reverse.py she.txt
+I'm sure that the shells are seashore shells.
+So if she sells seashells on the seashore,
+The shells that she sells are seashells I'm sure.
+She sells seashells on the seashore;
+</pre></div>
+</div>
+<p><strong>Problem 18: </strong>Write a program to print each line of a file in reverse order.</p>
+<p><strong>Problem 19: </strong>Implement unix commands <tt class="docutils literal"><span class="pre">head</span></tt> and <tt class="docutils literal"><span class="pre">tail</span></tt>. The <tt class="docutils literal"><span class="pre">head</span></tt> and <tt class="docutils literal"><span class="pre">tail</span></tt> commands take a file as argument and prints its first and last 10 lines of the file respectively.</p>
+<p><strong>Problem 20: </strong>Implement unix command <tt class="docutils literal"><span class="pre">grep</span></tt>. The <tt class="docutils literal"><span class="pre">grep</span></tt> command takes a string and a file as arguments and prints all lines in the file which contain the specified string.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python grep.py she.txt sure
+The shells that she sells are seashells I'm sure.
+I'm sure that the shells are seashore shells.
+</pre></div>
+</div>
+<p><strong>Problem 21: </strong>Write a program <cite>wrap.py</cite> that takes filename and width as aruguments and wraps the lines longer than <cite>width</cite>.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python wrap.py she.txt 30
+I'm sure that the shells are s
+eashore shells.
+So if she sells seashells on t
+he seashore,
+The shells that she sells are
+seashells I'm sure.
+She sells seashells on the sea
+shore;
+</pre></div>
+</div>
+<p><strong>Problem 22: </strong>The above wrap program is not so nice because it is breaking the line at middle of any word. Can you write a new program <cite>wordwrap.py</cite> that works like <cite>wrap.py</cite>, but breaks the line only at the word boundaries?</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python wordwrap.py she.txt 30
+I'm sure that the shells are
+seashore shells.
+So if she sells seashells on
+the seashore,
+The shells that she sells are
+seashells I'm sure.
+She sells seashells on the
+seashore;
+</pre></div>
+</div>
+<p><strong>Problem 23: </strong>Write a program <cite>center_align.py</cite> to center align all lines in the given file.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python center_align.py she.txt
+  I'm sure that the shells are seashore shells.
+    So if she sells seashells on the seashore,
+The shells that she sells are seashells I'm sure.
+       She sells seashells on the seashore;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-comprehensions">
+<h2>2.6. List Comprehensions<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#list-comprehensions" title="Permalink to this headline">¶</a></h2>
+<p>List Comprehensions provide a concise way of creating lists.
+Many times a complex task can be modelled in a single line.</p>
+<p>Here are some simple examples for transforming a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+<span class="go">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</pre></div>
+</div>
+<p>It is also possible to filter a list using <tt class="docutils literal"><span class="pre">if</span></tt> inside a list comprehension.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">[0, 2, 4, 6, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">[0, 4, 8, 36, 64]</span>
+</pre></div>
+</div>
+<p>It is possible to iterate over multiple lists using the built-in function <tt class="docutils literal"><span class="pre">zip</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="go">[(1, 2), (2, 3), (3, 5), (4, 7)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)]</span>
+<span class="go">[3, 5, 8, 11]</span>
+</pre></div>
+</div>
+<p>we can use multiple <tt class="docutils literal"><span class="pre">for</span></tt> clauses in single list comprehension.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">[(0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (2, 0), (2, 2), (2, 4), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4)]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">]</span>
+<span class="go">[(0, 2), (0, 4), (1, 3), (2, 0), (2, 4), (3, 1), (4, 0), (4, 2)]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">[(2, 0), (3, 1), (4, 0), (4, 2)]</span>
+</pre></div>
+</div>
+<p>The following example finds all Pythagorean triplets using numbers below 25. <tt class="docutils literal"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></tt> is a called pythagorean triplet if <tt class="docutils literal"><span class="pre">x*x</span> <span class="pre">+</span> <span class="pre">y*y</span> <span class="pre">==</span> <span class="pre">z*z</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="n">z</span><span class="o">*</span><span class="n">z</span><span class="p">]</span>
+<span class="go">[(3, 4, 5), (5, 12, 13), (6, 8, 10), (8, 15, 17), (9, 12, 15), (12, 16, 20)]</span>
+</pre></div>
+</div>
+<p><strong>Problem 24: </strong>Provide an implementation for <tt class="docutils literal"><span class="pre">zip</span></tt> function using list comprehensions.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">])</span>
+<span class="go">[(1, "a"), (2, "b"), (3, "c")]</span>
+</pre></div>
+</div>
+<p><strong>Problem 25: </strong>Python provides a built-in function <tt class="docutils literal"><span class="pre">map</span></tt> that applies a function to each element of a list. Provide an implementation for <tt class="docutils literal"><span class="pre">map</span></tt> using list comprehensions.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="go">[0, 1, 4, 9, 16]</span>
+</pre></div>
+</div>
+<p><strong>Problem 26: </strong>Python provides a built-in function <tt class="docutils literal"><span class="pre">filter(f,</span> <span class="pre">a)</span></tt> that returns items of the list <tt class="docutils literal"><span class="pre">a</span></tt> for which <tt class="docutils literal"><span class="pre">f(item)</span></tt> returns true. Provide an implementation for <tt class="docutils literal"><span class="pre">filter</span></tt> using list comprehensions.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">filter</span><span class="p">(</span><span class="n">even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="go">[0, 2, 4, 6, 8]</span>
+</pre></div>
+</div>
+<p><strong>Problem 27: </strong>Write a function <tt class="docutils literal"><span class="pre">triplets</span></tt> that takes a number <tt class="docutils literal"><span class="pre">n</span></tt> as argument and returns a list of triplets such that sum of first two elements of the triplet equals the third element using numbers below n. Please note that <tt class="docutils literal"><span class="pre">(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></tt> and <tt class="docutils literal"><span class="pre">(b,</span> <span class="pre">a,</span> <span class="pre">c)</span></tt> represent same triplet.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">triplets</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">[(1, 1, 2), (1, 2, 3), (1, 3, 4), (2, 2, 4)]</span>
+</pre></div>
+</div>
+<p><strong>Problem 28: </strong>Write a function <tt class="docutils literal"><span class="pre">enumerate</span></tt> that takes a list and returns a list of tuples containing <tt class="docutils literal"><span class="pre">(index,item)</span></tt> for each item in the list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">enumerate</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">])</span>
+<span class="go">[(0, "a"), (1, "b"), (2, "c")]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">]):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span>
+<span class="go">0 a</span>
+<span class="go">1 b</span>
+<span class="go">2 c</span>
+</pre></div>
+</div>
+<p><strong>Problem 29: </strong>Write a function <tt class="docutils literal"><span class="pre">array</span></tt> to create an 2-dimensional array. The function should take both dimensions as arguments. Value of each element can be initialized to None:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[[None, None, None], [None, None, None]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="go">[[5, None, None], [None, None, None]]</span>
+</pre></div>
+</div>
+<p><strong>Problem 30: </strong>Write a python function <tt class="docutils literal"><span class="pre">parse_csv</span></tt> to parse csv (comma separated values) files.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">open</span><span class="p">(</span><span class="s">'a.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">a,b,c</span>
+<span class="go">1,2,3</span>
+<span class="go">2,3,4</span>
+<span class="go">3,4,5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_csv</span><span class="p">(</span><span class="s">'a.csv'</span><span class="p">)</span>
+<span class="go">[['a', 'b', 'c'], ['1', '2', '3'], ['2', '3', '4'], ['3', '4', '5']]</span>
+</pre></div>
+</div>
+<p><strong>Problem 31: </strong>Generalize the above implementation of csv parser to support any delimiter and comments.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">open</span><span class="p">(</span><span class="s">'a.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go"># elements are separated by ! and comment indicator is #</span>
+<span class="go">a!b!c</span>
+<span class="go">1!2!3</span>
+<span class="go">2!3!4</span>
+<span class="go">3!4!5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse</span><span class="p">(</span><span class="s">'a.txt'</span><span class="p">,</span> <span class="s">'!'</span><span class="p">,</span> <span class="s">'#'</span><span class="p">)</span>
+<span class="go">[['a', 'b', 'c'], ['1', '2', '3'], ['2', '3', '4'], ['3', '4', '5']]</span>
+</pre></div>
+</div>
+<p><strong>Problem 32: </strong>Write a function <tt class="docutils literal"><span class="pre">mutate</span></tt> to compute all words generated by a single mutation on a given word. A mutation is defined as inserting a character, deleting a character, replacing a character, or swapping 2 consecutive characters in a string. For simplicity consider only letters from <tt class="docutils literal"><span class="pre">a</span></tt> to <tt class="docutils literal"><span class="pre">z</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">words</span> <span class="o">=</span> <span class="n">mutate</span><span class="p">(</span><span class="s">'hello'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'helo'</span> <span class="ow">in</span> <span class="n">words</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'cello'</span> <span class="ow">in</span> <span class="n">words</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'helol'</span> <span class="ow">in</span> <span class="n">words</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p><strong>Problem 33: </strong>Write a function <tt class="docutils literal"><span class="pre">nearly_equal</span></tt> to test whether two strings are nearly equal. Two strings <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt> are nearly equal when <tt class="docutils literal"><span class="pre">a</span></tt> can be generated by a single mutation on <tt class="docutils literal"><span class="pre">b</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">nearly_equal</span><span class="p">(</span><span class="s">'python'</span><span class="p">,</span> <span class="s">'perl'</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nearly_equal</span><span class="p">(</span><span class="s">'perl'</span><span class="p">,</span> <span class="s">'pearl'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nearly_equal</span><span class="p">(</span><span class="s">'python'</span><span class="p">,</span> <span class="s">'jython'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nearly_equal</span><span class="p">(</span><span class="s">'man'</span><span class="p">,</span> <span class="s">'woman'</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h2>2.7. Dictionaries<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#dictionaries" title="Permalink to this headline">¶</a></h2>
+<p>Dictionaries are like lists, but they can be indexed with non integer keys also. Unlike lists, dictionaries are not ordered.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'z'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s">'x'</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s">'z'</span><span class="p">]</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s">'x'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">'foo'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span>
+<span class="go">{(1, 2): 3, 'x': 2, 2: 'foo'}</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">del</span></tt> keyword can be used to delete an item from a dictionary.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'z'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="s">'x'</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">{'y': 2, 'z': 3}</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">keys</span></tt> method returns all keys in a dictionary, the <tt class="docutils literal"><span class="pre">values</span></tt> method returns all values in a dictionary and <tt class="docutils literal"><span class="pre">items</span></tt> method returns all key-value pairs in a dictionary.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="go">['x', 'y', 'z']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="go">[1, 2, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="go">[('x', 1), ('y', 2), ('z', 3)]</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">for</span></tt> statement can be used to iterate over a dictionary.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span> <span class="k">print</span> <span class="n">key</span>
+<span class="gp">...</span>
+<span class="go">x</span>
+<span class="go">y</span>
+<span class="go">z</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="k">print</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span>
+<span class="gp">...</span>
+<span class="go">x 1</span>
+<span class="go">y 2</span>
+<span class="go">z 3</span>
+</pre></div>
+</div>
+<p>Presence of a key in a dictionary can be tested using <tt class="docutils literal"><span class="pre">in</span></tt> operator or <tt class="docutils literal"><span class="pre">has_key</span></tt> method.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">'x'</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'p'</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">'x'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">'p'</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Other useful methods on dictionaries are <tt class="docutils literal"><span class="pre">get</span></tt> and <tt class="docutils literal"><span class="pre">setdefault</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'z'</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'p'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span>
+<span class="go">{'x': 1, 'y': 2, 'z': 3}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s">'p'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span>
+<span class="go">{'y': 2, 'x': 1, 'z': 3, 'p': 0}</span>
+</pre></div>
+</div>
+<p>Dictionaries can be used in string formatting to specify named parameters.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="s">'hello </span><span class="si">%(name)s</span><span class="s">'</span> <span class="o">%</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'python'</span><span class="p">}</span>
+<span class="go">'hello python'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">'Chapter </span><span class="si">%(index)d</span><span class="s">: </span><span class="si">%(name)s</span><span class="s">'</span> <span class="o">%</span> <span class="p">{</span><span class="s">'index'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'name'</span><span class="p">:</span> <span class="s">'Data Structures'</span><span class="p">}</span>
+<span class="go">'Chapter 2: Data Structures'</span>
+</pre></div>
+</div>
+<div class="section" id="example-word-frequency">
+<h3>2.7.1. Example: Word Frequency<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#example-word-frequency" title="Permalink to this headline">¶</a></h3>
+<p>Suppose we want to find number of occurrences of each word in a file.
+Dictionary can be used to store the number of occurrences for each word.</p>
+<p>Lets first write a function to count frequency of words, given a list of words.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">word_frequency</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="sd">"""Returns frequency of each word given a list of words.</span>
+
+<span class="sd">        &gt;&gt;&gt; word_frequency(['a', 'b', 'a'])</span>
+<span class="sd">        {'a': 2, 'b': 1}</span>
+<span class="sd">    """</span>
+    <span class="n">frequency</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">frequency</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">frequency</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">frequency</span>
+</pre></div>
+</div>
+<p>Getting words from a file is very trivial.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">read_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>We can combine these two functions to find frequency of all words in a file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">frequency</span> <span class="o">=</span> <span class="n">word_frequency</span><span class="p">(</span><span class="n">read_words</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">frequency</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">print</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>Problem 34: </strong>Improve the above program to print the words in the descending order of the number of occurrences.</p>
+<p><strong>Problem 35: </strong>Write a program to count frequency of characters in a given file. Can you use character frequency to tell whether the given file is a Python program file, C program file or a text file?</p>
+<p><strong>Problem 36: </strong>Write a program to find anagrams in a given list of words. Two words are called anagrams if one word can be formed by rearranging letters of another. For example ‘eat’, ‘ate’ and ‘tea’ are anagrams.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">anagrams</span><span class="p">([</span><span class="s">'eat'</span><span class="p">,</span> <span class="s">'ate'</span><span class="p">,</span> <span class="s">'done'</span><span class="p">,</span> <span class="s">'tea'</span><span class="p">,</span> <span class="s">'soup'</span><span class="p">,</span> <span class="s">'node'</span><span class="p">])</span>
+<span class="go">[['eat', 'ate', 'tea], ['done', 'node'], ['soup']]</span>
+</pre></div>
+</div>
+<p><strong>Problem 37: </strong>Write a function <tt class="docutils literal"><span class="pre">valuesort</span></tt> to sort values of a dictionary based on the key.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">valuesort</span><span class="p">({</span><span class="s">'x'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'a'</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="go">[3, 1, 2]</span>
+</pre></div>
+</div>
+<p><strong>Problem 38: </strong>Write a function <tt class="docutils literal"><span class="pre">invertdict</span></tt> to interchange keys and values in a dictionary. For simplicity, assume that all values are unique.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">invertdict</span><span class="p">({</span><span class="s">'x'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'y'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'z'</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="go">{1: 'x', 2: 'y', 3: 'z'}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="understanding-python-execution-environment">
+<h3>2.7.2. Understanding Python Execution Environment<a class="headerlink" href="http://anandology.com/python-practice-book/working-with-data.html#understanding-python-execution-environment" title="Permalink to this headline">¶</a></h3>
+<p>Python stores the variables we use as a dictionary. The <tt class="docutils literal"><span class="pre">globals()</span></tt> function returns all the globals variables in the current environment.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">globals</span><span class="p">()</span>
+<span class="go">{'__builtins__': &lt;module '__builtin__' (built-in)&gt;, '__name__': '__main__', '__doc__': None}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">globals</span><span class="p">()</span>
+<span class="go">{'__builtins__': &lt;module '__builtin__' (built-in)&gt;, '__name__': '__main__', '__doc__': None, 'x': 1}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">globals</span><span class="p">()</span>
+<span class="go">{'__builtins__': &lt;module '__builtin__' (built-in)&gt;, '__name__': '__main__', '__doc__': None, 'x': 2}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">globals</span><span class="p">()[</span><span class="s">'x'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>Just like <tt class="docutils literal"><span class="pre">globals</span></tt> python also provides a function <tt class="docutils literal"><span class="pre">locals</span></tt> which gives all the local variables in a function.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="k">print</span> <span class="nb">locals</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">{'a': 1, 'b': 2}</span>
+</pre></div>
+</div>
+<p>One more example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="s">"Hello </span><span class="si">%(name)s</span><span class="s">!"</span> <span class="o">%</span> <span class="nb">locals</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="s">"Guido"</span><span class="p">)</span>
+<span class="go">Hello Guido!</span>
+</pre></div>
+</div>
+<p><strong>Further Reading:</strong></p>
+<ul class="simple">
+<li>The article <a class="reference external" href="http://paulgraham.com/spam.html">A Plan for Spam</a> by <a class="reference external" href="http://paulgraham.com/">Paul Graham</a>  describes a method of detecting spam using probability of occurrence of a word in spam.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://anandology.com/python-practice-book/modules.html" class="btn btn-neutral float-right" title="3. Modules">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://anandology.com/python-practice-book/getting-started.html" class="btn btn-neutral" title="1. Getting Started"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, <a href="http://anandology.com/">Anand Chitipothu</a>.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2014-08-10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./WorkingwithData_files/jquery.js"></script>
+      <script type="text/javascript" src="./WorkingwithData_files/underscore.js"></script>
+      <script type="text/javascript" src="./WorkingwithData_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./WorkingwithData_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+<script src="./WorkingwithData_files/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66579110); }catch(e){}</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66579110ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+
+</body></html>
